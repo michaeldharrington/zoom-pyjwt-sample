@@ -20,7 +20,4 @@ r = requests.get('https://api.zoom.us/v2/users/' + userId, headers=headers)
 # Print the requests status code
 print(r.status_code)
 # Print the response in JSON
-
-json_data = json.loads(r.text)
-
-print(json.dumps(json_data, indent=4))
+print(json.dumps(json.loads(r.text), indent=4))
